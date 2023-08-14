@@ -1,3 +1,3 @@
-# README
+# Rails on Udemy
 
-Rails on Udemy, creating Message_me app - chat app.
+Creating Message_me app - chat app with Ruby on Rails.
