@@ -1,1 +1,31 @@
 @import 'semantic-ui';
+
+body {background-color: rgb(0, 0, 0) !important;}
+
+h1,h2 {color: rgb(3, 218, 39) !important;}
+
+.chatbox {
+    height: 450px;
+    background-color: black !important;
+}
+
+.summary {
+    color: rgb(3, 218, 39) !important;
+}
+
+.item {
+    color: rgb(3, 218, 39) !important;
+}
+
+a {
+    color: rgb(3, 218, 39) !important;
+    font-weight: bold;
+}
+
+.container {
+    background-color: black !important;
+}
+
+.menu {
+    background-color: black !important;
+}
