@@ -3,3 +3,7 @@
 // Loads all Semantic javascripts
 //= require semantic-ui
 //= require jquery
+
+import jquery from "jquery";
+window.jQuery = jquery
+window.$ = jquery
