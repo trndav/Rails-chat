@@ -1,6 +1,4 @@
-    <a class="item">
-        Rails Chat
-    </a>
+    <%= link_to "Rails Chat", root_path, class: "item" %>
     <a class="item">
         ChatRoom
     </a>
@@ -10,8 +8,8 @@
     <div class="right menu">
         <div class="ui dropdown item">
             Account <i class="dropdown icon"></i>
-            <div class="menu">
-                <a class="item">Log In</a>
+            <div class="menu", id="dropdown-text"> 
+                <%= link_to "LogIn", login_path, class: "item" %>
                 <a class="item">Create New Account</a>
                 <a class="item">Log Out</a>
             </div>
