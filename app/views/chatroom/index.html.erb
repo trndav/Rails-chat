@@ -6,19 +6,26 @@
 <div class="ui two column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui feed">  
+      <div class="content" id="messages">
+        <div class="ui feed" id="message-container">  
         
         <%= render @messages %>
         </div>
       </div>
+
+      <script>   // Run this script after the page is loaded
+        window.addEventListener('load', function() {
+        var messageContainer = document.getElementById('message-container');
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+      });
+</script>
 
       <div class="extra content">
         <%= form_for(@message, html: { class: "ui reply form", role: "form"}, url: message_path) do |f| %>
           <div class="field">
             <div class="ui fluid icon input">
               <%= f.text_field :body %>
-              <%= f.button '<i class="border inverted orange edit icon"></i>'.html_safe %>
+              <%= f.button '<i class="border inverted green edit icon"></i>'.html_safe %>
             </div>
           </div>
         <% end %>      
@@ -28,20 +35,17 @@
   </div>
 
   <div class="four wide column">
-    <div class="ui card chatbox">
-      <div class="content">
-        <div class="ui inverted vertical menu">
-          <a class="item">
-            Home
-          </a>
-          <a class="item">
-            Messages
-          </a>
-          <a class="item">
-            Friends
-          </a>
-        </div>
-      </div>
-    </div>
+    <div class="ui inverted vertical menu">
+      <a class="item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>    
+    
   </div>
 </div>
